@@ -95,7 +95,7 @@ exports.signin = (req, res) => {
        let access_token = createJWT(
           user.email,
           user._id,
-          3600
+          120
        );
        jwt.verify(access_token, process.env.TOKEN_SECRET, (err,
 decoded) => {
